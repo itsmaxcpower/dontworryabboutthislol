@@ -1,0 +1,25 @@
+name: HyperBans
+version: 1.2.3
+author: Skptical
+desription: A light-weight punishment plugin designed for big networks, with full UUID support.
+main: dev.skptical.HyperBans.Bootstrap.HyperBans
+api-version: 1.12.2
+softdepend:
+  - Vault
+  - LuckPerms
+website: hyperon.us
+permissions:
+  hyperbans.*:
+    default: op
+    description: Gives access to everything inside the plugin.
+    children:
+      - hyperbans.reload
+  hyperbans.reload:
+    default: op
+    description: Gives access to reload the plugin.
+commands:
+  hyperbans:
+    description: The main command, used to reload and check the current version.
+    aliases:
+      - bans
+      - hb
